@@ -1,0 +1,4 @@
+var healthRecordsControl = {
+	defaults : {},
+	fields : {}
+};
