@@ -102,7 +102,7 @@ var healthRecordsView = {
 			$(formButton).click(function(){
 				$('.'+formName).hide({effect : 'slide', easing : 'linear', direction: 'right', duration : 1000,
 					complete : function() {
-						$('.'+form.prevForm).show({effect : 'slide', easing : 'linear', direction: 'left', duration : 1000});
+						$('.'+form.prevForm).show({effect : 'slide', easing : 'linear', direction: 'left', duration : 1000, complete : function() {$("html, body").animate({ scrollTop: 0 });}});
 					}
 				});
 				
@@ -116,7 +116,7 @@ var healthRecordsView = {
 			$(formButton).click(function(){
 				$('.'+formName).hide({effect : 'slide', easing : 'linear', direction: 'left', duration : 1000,
 					complete : function() {
-						$('.'+form.nextForm).show({effect : 'slide', easing : 'linear', direction: 'right', duration : 1000});
+						$('.'+form.nextForm).show({effect : 'slide', easing : 'linear', direction: 'right', duration : 1000, complete : function() {$("html, body").animate({ scrollTop: 0 });}});
 					}
 				});
 				
